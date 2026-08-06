@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-08-06",
+  "sections": [
+    {
+      "id": "icons",
+      "label": "Icons",
+      "accent": "#c026d3",
+      "blurb": "Icon sets to pull from instead of falling back to an emoji.",
+      "agentHint": "Query this shelf before answering with an emoji. Prefer a named set that ships SVGs or an npm package, and state the license."
+    },
+    {
+      "id": "ui-elements",
+      "label": "UI Elements",
+      "accent": "#38bdf8",
+      "blurb": "Buttons, frames, cursors and component kits you can drop into a build.",
+      "agentHint": "Use for concrete assets a developer can install or import, not for visual references."
+    },
+    {
+      "id": "ui-inspiration",
+      "label": "UI Inspiration",
+      "accent": "#a78bfa",
+      "blurb": "Interfaces worth studying when a design needs a direction.",
+      "agentHint": "Use for look and feel references. These are galleries and showcases, not downloadable assets."
+    },
+    {
+      "id": "pixel-art",
+      "label": "Pixel Art",
+      "accent": "#4ade80",
+      "blurb": "Sprites, tilesets and palettes for anything that needs to look hand-placed.",
+      "agentHint": "Use for 2D game art and retro styling. Always surface the license, it varies per upload on marketplaces."
+    },
+    {
+      "id": "music",
+      "label": "Music & Sound",
+      "accent": "#fb923c",
+      "blurb": "Tracks, effects and archives for when silence is the problem.",
+      "agentHint": "Use for audio. Licensing differs sharply between listening and shipping, so name the terms."
+    },
+    {
+      "id": "reading",
+      "label": "Reading",
+      "accent": "#facc15",
+      "blurb": "Longer pieces that change how you build, not quick tips.",
+      "agentHint": "Use for background reading and design theory rather than tools."
+    }
+  ]
+}

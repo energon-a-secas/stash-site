@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-08-06",
+  "section": {
+    "id": "ui-inspiration",
+    "label": "UI Inspiration",
+    "accent": "#a78bfa",
+    "blurb": "Interfaces worth studying when a design needs a direction.",
+    "agentHint": "Use for look and feel references. These are galleries and showcases, not downloadable assets."
+  },
+  "entries": [
+    {
+      "id": "nerv-ui",
+      "name": "NERV UI",
+      "url": "https://mdrbx.github.io/nerv-ui/examples/",
+      "section": "ui-inspiration",
+      "why": "Evangelion-flavoured interface kit, all monospace warnings and angular panels. Steal the layout language for anything that should feel operational.",
+      "price": "free",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "retro",
+        "css",
+        "terminal",
+        "showcase"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "godly",
+      "name": "Godly",
+      "url": "https://godly.website/",
+      "section": "ui-inspiration",
+      "why": "Hand-picked site designs sorted by style and industry. The fastest way to find a direction when the brief is still vague.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "showcase",
+        "web",
+        "gallery"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "land-book",
+      "name": "Land-book",
+      "url": "https://land-book.com/",
+      "section": "ui-inspiration",
+      "why": "Landing page gallery you can filter by style, colour and category. Better than scrolling a feed when you need one specific layout.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "showcase",
+        "landing",
+        "gallery"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "mobbin",
+      "name": "Mobbin",
+      "url": "https://mobbin.com/",
+      "section": "ui-inspiration",
+      "why": "Screenshots of shipped mobile and web apps organised by flow. Best for seeing how others handled onboarding, paywalls and empty states.",
+      "price": "freemium",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "showcase",
+        "mobile",
+        "patterns",
+        "flows"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "awwwards",
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "section": "ui-inspiration",
+      "why": "Award gallery for ambitious web work. Mine it for motion and interaction ideas rather than layouts you can ship on a deadline.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "showcase",
+        "motion",
+        "web"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    }
+  ]
+}

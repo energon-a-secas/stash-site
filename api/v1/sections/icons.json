@@ -1,0 +1,98 @@
+{
+  "generatedAt": "2026-08-06",
+  "section": {
+    "id": "icons",
+    "label": "Icons",
+    "accent": "#c026d3",
+    "blurb": "Icon sets to pull from instead of falling back to an emoji.",
+    "agentHint": "Query this shelf before answering with an emoji. Prefer a named set that ships SVGs or an npm package, and state the license."
+  },
+  "entries": [
+    {
+      "id": "lobehub-icons",
+      "name": "LobeHub Icons",
+      "url": "https://lobehub.com/icons",
+      "section": "icons",
+      "why": "Logos for every AI model and provider as SVG and React components. Reach for this when a UI needs OpenAI, Claude, Gemini or Ollama marks instead of a robot emoji.",
+      "price": "free",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "ai",
+        "svg",
+        "react",
+        "brand"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "lucide",
+      "name": "Lucide",
+      "url": "https://lucide.dev/",
+      "section": "icons",
+      "why": "Consistent outline set of roughly 1,600 icons under MIT. The safe default when a project needs one coherent icon language everywhere.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "open-source",
+        "svg",
+        "outline"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "simple-icons",
+      "name": "Simple Icons",
+      "url": "https://simpleicons.org/",
+      "section": "icons",
+      "why": "Brand marks for thousands of companies with their official hex colors. Use it for stack badges, footers and integration lists.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "brand",
+        "svg",
+        "logos"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "tabler-icons",
+      "name": "Tabler Icons",
+      "url": "https://tabler.io/icons",
+      "section": "icons",
+      "why": "Over 5,000 MIT icons drawn on a strict 24px grid, with outline and filled variants of most glyphs.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "open-source",
+        "svg",
+        "dense-set"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "phosphor",
+      "name": "Phosphor Icons",
+      "url": "https://phosphoricons.com/",
+      "section": "icons",
+      "why": "One icon family in six weights, from hairline to duotone. Useful when a design needs weight contrast without mixing two sets.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "open-source",
+        "svg",
+        "weights"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    }
+  ]
+}

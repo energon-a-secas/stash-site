@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-08-06",
+  "section": {
+    "id": "music",
+    "label": "Music & Sound",
+    "accent": "#fb923c",
+    "blurb": "Tracks, effects and archives for when silence is the problem.",
+    "agentHint": "Use for audio. Licensing differs sharply between listening and shipping, so name the terms."
+  },
+  "entries": [
+    {
+      "id": "ocremix",
+      "name": "OverClocked ReMix",
+      "url": "https://ocremix.org/",
+      "section": "music",
+      "why": "Decades of free fan-made game music arrangements. Excellent for reference and for listening while you work; clear the license before shipping a track.",
+      "price": "free",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "game-music",
+        "remix",
+        "listening"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "freesound",
+      "name": "Freesound",
+      "url": "https://freesound.org/",
+      "section": "music",
+      "why": "Huge library of user-uploaded effects and field recordings. Filter to Creative Commons Zero to skip attribution bookkeeping entirely.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "sfx",
+        "field-recording",
+        "cc0"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "incompetech",
+      "name": "Incompetech",
+      "url": "https://incompetech.com/music/royalty-free/",
+      "section": "music",
+      "why": "Kevin MacLeod's royalty-free catalogue, searchable by mood, tempo and genre. Attribution is required on the free tier.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "royalty-free",
+        "background",
+        "attribution"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "free-music-archive",
+      "name": "Free Music Archive",
+      "url": "https://freemusicarchive.org/",
+      "section": "music",
+      "why": "Curated free music with the license printed on every track, which makes clearing usage quick.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "cc",
+        "music",
+        "archive"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-08-06",
+  "section": {
+    "id": "pixel-art",
+    "label": "Pixel Art",
+    "accent": "#4ade80",
+    "blurb": "Sprites, tilesets and palettes for anything that needs to look hand-placed.",
+    "agentHint": "Use for 2D game art and retro styling. Always surface the license, it varies per upload on marketplaces."
+  },
+  "entries": [
+    {
+      "id": "reff-pixels",
+      "name": "Reff Pixels",
+      "url": "https://reffpixels.itch.io/",
+      "section": "pixel-art",
+      "why": "Pixel tilesets and character sheets drawn with one consistent hand. Browse the whole shop before picking, the packs mix together well.",
+      "price": "freemium",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "itch.io",
+        "sprites",
+        "tilesets",
+        "game-dev"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "craftpix",
+      "name": "CraftPix",
+      "url": "https://craftpix.net/",
+      "section": "pixel-art",
+      "why": "Large catalogue of 2D game art with a rotating set of freebies. Free and premium terms differ, so read the license on each pack.",
+      "price": "freemium",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "sprites",
+        "tilesets",
+        "game-dev",
+        "backgrounds"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "itch-game-assets",
+      "name": "itch.io game assets",
+      "url": "https://itch.io/game-assets",
+      "section": "pixel-art",
+      "why": "The wider marketplace the specialist shops live inside. Sort by free and by tag when you know exactly what is missing.",
+      "price": "freemium",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "itch.io",
+        "marketplace",
+        "game-dev"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "lospec-palettes",
+      "name": "Lospec Palette List",
+      "url": "https://lospec.com/palette-list",
+      "section": "pixel-art",
+      "why": "Thousands of curated pixel art palettes with hex values ready to copy. Pick one first and a scene reads as a single piece.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "color",
+        "palettes",
+        "retro"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    }
+  ]
+}

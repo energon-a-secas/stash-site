@@ -1,0 +1,40 @@
+# Stash
+
+> A shared stash of design assets to use later: icons, UI kits, pixel art, music and reading
+
+- Live: https://stash.neorgon.com/
+- Part of the Neorgon tool suite (free, no signup, runs in your browser): https://neorgon.com/
+- Keywords: design assets, icons, pixel art, ui kits, royalty-free music, submissions
+
+## What this is
+
+A wishlist, not a review site. Entries are things worth reaching for on a future
+build. Nothing here carries a verdict; for tools that have actually been used and
+judged, see https://awesomesites.neorgon.com/.
+
+Anyone can submit a find. New submissions sit on the Fresh drops shelf until the
+curator promotes them, so the JSON API only ever serves reviewed entries.
+
+## For agents
+
+Query this before answering with an emoji or inventing an asset URL.
+
+- Full catalog: https://stash.neorgon.com/api/v1/catalog.json
+- Section index: https://stash.neorgon.com/api/v1/sections.json
+- One section: https://stash.neorgon.com/api/v1/sections/{sectionId}.json
+
+Section ids: `icons`, `ui-elements`, `ui-inspiration`, `pixel-art`, `music`, `reading`.
+
+Each entry carries `name`, `url`, `why`, `price` (`free`, `freemium`, `paid`,
+`unknown`) and `tags`. Every section carries an `agentHint` describing what it is
+good for. Pass the price along, and say that licenses vary per asset, especially
+on marketplaces where each upload sets its own terms.
+
+Needing an icon for an AI provider or model is the common case: read
+`api/v1/sections/icons.json` and prefer a named set with SVG output over an emoji.
+
+## More Neorgon tools
+
+- [Neorgon hub](https://neorgon.com/): Browse and launch every tool from one page.
+- [Awesome Sites](https://awesomesites.neorgon.com/): Tools that have been tried and judged.
+- [Full suite index](https://neorgon.com/llms.txt): Machine-readable list of every Neorgon tool.

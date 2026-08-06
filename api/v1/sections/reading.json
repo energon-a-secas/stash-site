@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-08-06",
+  "section": {
+    "id": "reading",
+    "label": "Reading",
+    "accent": "#facc15",
+    "blurb": "Longer pieces that change how you build, not quick tips.",
+    "agentHint": "Use for background reading and design theory rather than tools."
+  },
+  "entries": [
+    {
+      "id": "bgg-self-publishing",
+      "name": "Game design and self-publishing resource thread",
+      "url": "https://boardgamegeek.com/thread/322382/game-design-and-self-publishing-a-resource-for-gam",
+      "section": "reading",
+      "why": "Long-running BoardGameGeek thread collecting the unglamorous side of shipping a game: manufacturing, costs, playtesting and distribution.",
+      "price": "free",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "game-design",
+        "publishing",
+        "thread"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "laws-of-ux",
+      "name": "Laws of UX",
+      "url": "https://lawsofux.com/",
+      "section": "reading",
+      "why": "The usability heuristics people quote in design reviews, each with a plain explanation and the original source.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "ux",
+        "reference",
+        "heuristics"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "inclusive-components",
+      "name": "Inclusive Components",
+      "url": "https://inclusive-components.design/",
+      "section": "reading",
+      "why": "Heydon Pickering rebuilds common components accessibly and explains every decision. Read one before writing your own tabs or menu.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "accessibility",
+        "patterns",
+        "components"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "refactoring-ui",
+      "name": "Refactoring UI",
+      "url": "https://www.refactoringui.com/",
+      "section": "reading",
+      "why": "Design advice aimed at developers, from the people behind Tailwind. Concrete rules about spacing, colour and hierarchy rather than theory.",
+      "price": "paid",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "design",
+        "book",
+        "practical"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    }
+  ]
+}

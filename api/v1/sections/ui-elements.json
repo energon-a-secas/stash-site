@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-08-06",
+  "section": {
+    "id": "ui-elements",
+    "label": "UI Elements",
+    "accent": "#38bdf8",
+    "blurb": "Buttons, frames, cursors and component kits you can drop into a build.",
+    "agentHint": "Use for concrete assets a developer can install or import, not for visual references."
+  },
+  "entries": [
+    {
+      "id": "crusenho-ui-essential",
+      "name": "Complete UI Essential Pack",
+      "url": "https://crusenho.itch.io/complete-ui-essential-pack",
+      "section": "ui-elements",
+      "why": "Game-ready chrome in one download: buttons, bars, frames, cursors and icons across several palettes. Drops straight into a game or a game-styled web app.",
+      "price": "paid",
+      "status": "untried",
+      "pick": true,
+      "tags": [
+        "itch.io",
+        "game-dev",
+        "kit"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "kenney-assets",
+      "name": "Kenney",
+      "url": "https://kenney.nl/assets",
+      "section": "ui-elements",
+      "why": "Thousands of CC0 game assets covering UI packs, fonts and audio. No attribution required, which makes it the least risky starting point.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "game-dev",
+        "cc0",
+        "kit",
+        "audio"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "shadcn-ui",
+      "name": "shadcn/ui",
+      "url": "https://ui.shadcn.com/",
+      "section": "ui-elements",
+      "why": "Copy-paste React components built on Radix and Tailwind. You own the code after pasting, so restyling never fights a library upgrade.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "web",
+        "react",
+        "tailwind"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    },
+    {
+      "id": "opengameart",
+      "name": "OpenGameArt",
+      "url": "https://opengameart.org/",
+      "section": "ui-elements",
+      "why": "Community library of sprites, tiles, interface art and audio. Licenses are set per upload, so check each one before shipping.",
+      "price": "free",
+      "status": "untried",
+      "pick": false,
+      "tags": [
+        "game-dev",
+        "open-source",
+        "mixed-license"
+      ],
+      "addedBy": "curator",
+      "addedAt": "2026-08-06"
+    }
+  ]
+}

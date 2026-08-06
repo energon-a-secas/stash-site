@@ -1,0 +1,55 @@
+---
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#0f172a"
+    primaryTextColor: "#e2e8f0"
+    primaryBorderColor: "#0063e5"
+    lineColor: "#38bdf8"
+    secondaryColor: "#1e293b"
+    tertiaryColor: "#1e293b"
+    clusterBkg: "#f0f7ff"
+    clusterBorder: "#bfdbfe"
+    edgeLabelBackground: "#e8f0ff"
+    mainBkg: "#0f172a"
+    nodeBorder: "#0063e5"
+    titleColor: "#1e1b4b"
+    fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif"
+    fontSize: "13px"
+---
+flowchart TB
+    User([Visitor]) --> HTML["index.html<br/>App shell"]
+    Agent([AI agent / crawler]) --> API
+
+    subgraph Frontend["Frontend (ES modules, no build step)"]
+        HTML --> app["app.js<br/>Entry point"]
+        app --> state["state.js<br/>Shelf, filters, visitor id"]
+        app --> datajs["data.js<br/>Catalog + live layer"]
+        app --> render["render.js<br/>Shelves and cards"]
+        app --> events["events.js<br/>Filters, votes, keyboard"]
+        app --> submit["submit.js<br/>Add a find, curator unlock"]
+        app --> filters["filters.js<br/>Search and sorting"]
+    end
+
+    subgraph Static["Curated catalog (committed)"]
+        Data[("data/entries.json<br/>data/sections.json")] -->|"make api"| Build["scripts/build-api.mjs<br/>validates, then writes"]
+        Build --> API[("api/v1/catalog.json<br/>api/v1/sections/*.json")]
+    end
+
+    API -->|"fetch on load"| datajs
+
+    subgraph Convex["Convex backend (live layer)"]
+        submissions["submissions.ts<br/>submit, listPending"]
+        votes["votes.ts<br/>toggle, summary"]
+        admin["admin.ts (node)<br/>bcrypt passphrase check"]
+        moderation["moderation.ts<br/>lockout guard"]
+        admin --> moderation
+        admin -->|"internal only"| submissions
+        submissions & votes --> DB[("submissions<br/>votes<br/>curatorAttempts")]
+    end
+
+    datajs -->|"queries and mutations"| submissions
+    datajs --> votes
+    submit -->|"approve / reject"| admin
+
+    DB -.->|"npm run sync<br/>approved entries"| Data
