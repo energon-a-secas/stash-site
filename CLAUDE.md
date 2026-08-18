@@ -1,4 +1,4 @@
-# CLAUDE.md — Stash
+# CLAUDE.md: Stash
 
 A wishlist of design assets to use later, open to submissions. Sibling of `awesome-sites-site`.
 
