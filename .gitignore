@@ -21,3 +21,11 @@ package-lock.json
 # Convex
 convex/.env.local
 .env.local
+
+# ── Neorgon base (enforced by smoke check 20) ─────────────────────────────────
+!.env.example
+.forge/
+__pycache__/
+*.py[cod]
+skills-archived/
+*.log
