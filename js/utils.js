@@ -1,13 +1,11 @@
-/** Escape anything that reaches innerHTML. All catalog copy and every submission
- *  is treated as untrusted text, never as markup. */
-export function escHtml(value) {
-  return String(value ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
+// Generic helpers come from the DOM Kit (js/neorgon-dom.js, vendored from
+// packages/neorgon-ui/dom/). They are re-exported so every existing
+// `import { escHtml } from './utils.js'` keeps working.
+//
+// Do not edit js/neorgon-dom.js. Edit the canonical source and run
+// packages/neorgon-ui/sync-dom.sh.
+import { escHtml, debounce } from './neorgon-dom.js';
+export { escHtml, debounce };
 
 /** Only http(s) links ever become an href. Anything else renders as plain text. */
 export function safeUrl(value) {
@@ -26,13 +24,6 @@ export function hostOf(value) {
   }
 }
 
-export function debounce(fn, ms = 200) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn(...args), ms);
-  };
-}
 
 let toastTimer;
 export function toast(message) {
