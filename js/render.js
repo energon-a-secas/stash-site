@@ -203,9 +203,9 @@ export function agentDigest() {
   for (const section of state.sections) {
     const entries = state.entries.filter((entry) => entry.section === section.id);
     if (!entries.length) continue;
-    lines.push(`## ${section.label} — ${section.agentHint}`);
+    lines.push(`## ${section.label}: ${section.agentHint}`);
     for (const entry of entries) {
-      lines.push(`- ${entry.name} (${entry.price}) ${entry.url} — ${entry.why}`);
+      lines.push(`- ${entry.name} (${entry.price}) ${entry.url}: ${entry.why}`);
     }
     lines.push('');
   }

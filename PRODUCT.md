@@ -1,4 +1,4 @@
-# Stash — Product notes
+# Stash: Product notes
 
 ## Purpose
 
