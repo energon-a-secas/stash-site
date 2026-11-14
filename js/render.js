@@ -1,3 +1,4 @@
+import { hasBackend } from './config.js';
 import { hasVoted, isCurator, sectionById, state, tagIndex, voteCount } from './state.js';
 import { groupedEntries, PRICE_LABELS, shelfCount, visibleEntries } from './filters.js';
 import { escHtml, hostOf, relativeDate, safeUrl } from './utils.js';
@@ -14,12 +15,14 @@ function tagPills(tags) {
 }
 
 function voteButton(entry) {
+  // Without a backend no vote is ever recorded, so a "0 want" on every card would be a zero
+  // standing in for an unknown. The button appears only where votes can be cast.
+  if (!hasBackend()) return '';
   const count = voteCount(entry.id);
   const voted = hasVoted(entry.id);
   const disabled = state.backendReady ? '' : ' disabled';
-  const title = state.backendReady ? 'Mark this as something you want to use' : 'Voting opens once the backend is live';
   return `<button type="button" class="vote${voted ? ' is-voted' : ''}" data-vote="${escHtml(entry.id)}"
-      aria-pressed="${voted}" title="${escHtml(title)}"${disabled}>
+      aria-pressed="${voted}" title="Mark this as something you want to use"${disabled}>
       ${HEART}<span class="vote__count">${count}</span><span class="vote__label">want</span>
     </button>`;
 }
@@ -49,6 +52,7 @@ function entryCard(entry) {
   const credit = entry.fresh
     ? `<span class="entry__credit">from ${escHtml(entry.addedBy || 'anonymous')} ${escHtml(relativeDate(entry.createdAt))}</span>`
     : '';
+  const foot = `${voteButton(entry)}${credit}${curatorControls(entry)}`;
 
   return `<article class="entry${entry.fresh ? ' entry--fresh' : ''}" style="--entry-accent:${escHtml(accent)}">
       <div class="entry__head">
@@ -61,11 +65,7 @@ function entryCard(entry) {
         <span class="pill pill--price" data-price="${escHtml(entry.price)}">${escHtml(PRICE_LABELS[entry.price] || entry.price)}</span>
         ${tagPills(entry.tags)}
       </div>
-      <div class="entry__foot">
-        ${voteButton(entry)}
-        ${credit}
-        ${curatorControls(entry)}
-      </div>
+      ${foot ? `<div class="entry__foot">${foot}</div>` : ''}
     </article>`;
 }
 
@@ -81,9 +81,13 @@ export function renderRail() {
          data-shelf="${escHtml(section.id)}" style="--shelf-accent:${escHtml(section.accent)}">
          ${escHtml(section.label)}<span class="shelf__count">${shelfCount(section.id)}</span></button>`,
     ),
-    `<button type="button" class="shelf shelf--fresh${state.shelf === 'fresh' ? ' is-active' : ''}" data-shelf="fresh">
-       Fresh drops<span class="shelf__count">${fresh}</span></button>`,
   ];
+  // Fresh drops holds live submissions, which only exist with a backend. Without one a find
+  // goes to GitHub instead, so the shelf would stay empty for good.
+  if (hasBackend()) {
+    buttons.push(`<button type="button" class="shelf shelf--fresh${state.shelf === 'fresh' ? ' is-active' : ''}" data-shelf="fresh">
+       Fresh drops<span class="shelf__count">${fresh}</span></button>`);
+  }
   rail.innerHTML = buttons.join('');
 }
 
@@ -123,9 +127,7 @@ function emptyState() {
   if (state.shelf === 'fresh') {
     return `<div class="empty">
         <h3 class="empty__title">Nothing waiting</h3>
-        <p class="empty__body">New submissions land here before they reach a shelf. ${
-          state.backendReady ? 'Be the first to drop something.' : 'Submissions open once the backend is connected.'
-        }</p>
+        <p class="empty__body">New submissions land here before they reach a shelf. Be the first to drop something.</p>
         <button type="button" class="btn btn--primary" data-open-submit>Add a find</button>
       </div>`;
   }

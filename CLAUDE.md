@@ -38,7 +38,9 @@ For community submissions: approve on the site at `#curate`, then
 
 Deployment needs `CURATOR_PASSWORD_HASH` set (`make hash` prints the command). `js/config.js`
 holds `CONVEX_URL`; while it is empty the site degrades to opening a prefilled GitHub issue on
-submit, and voting is disabled. That fallback is intentional, do not remove it.
+submit, and voting is off: the vote buttons, the Most wanted sort and the Fresh drops shelf are
+not shown, because a "0 want" on every card would be a zero standing in for an unknown. That
+fallback is intentional, do not remove it. Public copy never mentions the backend.
 
 Moderation has no accounts: one passphrase, bcrypt-verified server-side on every call, held in
 memory for the tab only. Never persist it, and never mint a token into localStorage.

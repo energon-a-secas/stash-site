@@ -622,36 +622,6 @@ button:active,
 
 .container { max-width: 1120px; }
 
-/* ── Intro ─────────────────────────────────────────────────── */
-.intro {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-8) 0 var(--space-2);
-  border-bottom: 1px solid var(--border-subtle);
-}
-.intro__title {
-  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-}
-.intro__lead {
-  font-size: var(--text-base);
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 62ch;
-}
-.intro__lead a { color: var(--accent-bright); text-decoration: none; border-bottom: 1px solid rgba(217,70,239,.4); }
-.intro__lead a:hover { border-bottom-color: var(--accent-bright); }
-.intro__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-2);
-  padding-bottom: var(--space-6);
-}
-
 /* ── Shelf rail ────────────────────────────────────────────── */
 .shelf-rail {
   display: flex;
@@ -922,6 +892,11 @@ button:active,
 .vote.is-voted svg { fill: currentColor; }
 .vote__count { font-variant-numeric: tabular-nums; }
 
+/* ── Machine-readable pointer, under the shelves ───────────── */
+.results-note { font-size: var(--text-xs); color: var(--text-muted); }
+.results-note a { color: var(--accent-bright); text-decoration: none; border-bottom: 1px solid rgba(217,70,239,.4); }
+.results-note a:hover { border-bottom-color: var(--accent-bright); }
+
 /* ── Empty & teaser ────────────────────────────────────────── */
 .empty {
   display: flex;
@@ -985,7 +960,6 @@ button:active,
   .grid { grid-template-columns: 1fr; }
   .field-row { grid-template-columns: 1fr; }
   .toolbar--filters { align-items: stretch; }
-  .intro { padding-top: var(--space-6); }
   .search-kbd { display: none; }
   .search-input { padding-right: var(--space-3); }
 }

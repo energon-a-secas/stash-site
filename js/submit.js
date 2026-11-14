@@ -77,7 +77,7 @@ export function openSubmit() {
   if (state.shelf !== 'all' && state.shelf !== 'fresh') $('fSection').value = state.shelf;
   $('submitNote').textContent = hasBackend()
     ? 'Lands on the Fresh drops shelf right away, then gets reviewed before it joins a shelf.'
-    : 'Opens a prefilled GitHub issue, since live submissions are not switched on yet.';
+    : 'Opens a prefilled GitHub issue. Once it is reviewed, the find joins a shelf.';
   openModal('submitModal');
 }
 

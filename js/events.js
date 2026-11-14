@@ -20,7 +20,7 @@ function toggleSetValue(set, value) {
 }
 
 async function handleVote(id, button) {
-  if (!state.backendReady) return toast('Voting opens once the backend is live');
+  if (!state.backendReady) return toast('Votes are still loading');
   button.disabled = true;
   const result = await toggleVote(id);
   if (result?.ok) {
@@ -131,7 +131,6 @@ export function wireEvents() {
   });
 
   $('submitBtn')?.addEventListener('click', openSubmit);
-  $('introSubmitBtn')?.addEventListener('click', openSubmit);
   $('copyAgentBtn')?.addEventListener('click', copyForAgent);
 
   checkCurateHash();
